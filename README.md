@@ -1,6 +1,7 @@
 ### Table of content
 
 * [Introduction](#introduction)
+* [Variables](#variables)
 
 ## Introduction
 
@@ -142,3 +143,162 @@ Hello, I am 22 years old
 
 [🔝 Go to top](#table-of-content)
 [🔝 Up](#introduction)
+
+## Variables
+
+<p> Variables do not need to be declared with any particular type, and can even change type after they have been set. If you want to specify the data type of a variable, this can be done with casting.</p>
+
+```python
+> python
+Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+Ctrl click to launch VS Code Native REPL
+>>> a = 2
+>>> A = "python"
+>>> c = str(2)
+>>> print(a,type(a),c,type(c))
+2 <class 'int'> 2 <class 'str'>
+>>> print(a+c)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+    print(a+c)
+          ~^~
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+>>> c = 2
+>>> print(a+c)
+4
+>>> exit()
+>
+```
+🔹Rules for Python variables:
+
+* A variable name must start with a letter or the underscore character
+* A variable name cannot start with a number
+* A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )
+* Variable names are case-sensitive (age, Age and AGE are three different variables)
+* A variable name cannot be any of the Python keywords.
+
+<details><summary>Example</summary>
+
+<br>
+
+```python
+> python
+Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+Ctrl click to launch VS Code Native REPL
+>>> 2var = 'python'
+  File "<stdin>", line 1
+    2var = 'python'
+    ^
+SyntaxError: invalid decimal literal
+>>> var-1 = 'python'
+  File "<stdin>", line 1
+    var-1 = 'python'
+    ^^^^^
+SyntaxError: cannot assign to expression here. Maybe you meant '==' instead of '='?
+>>> var 2 = 'python'
+  File "<stdin>", line 1
+    var 2 = 'python'
+        ^
+SyntaxError: invalid syntax
+>>> var = 1
+>>> Var = 2
+>>> VAR = 3
+>>> print(var,Var,VAR)
+1 2 3
+>>> exit()
+>
+```
+
+</details>
+
+🔹Unpack a Collection
+
+```python
+> python
+Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+Ctrl click to launch VS Code Native REPL
+>>> a,b,c = 1,2,3
+>>> print(a,b,c)
+1 2 3
+>>> pokemon = ["pikachu","blastoise","darkrai"]
+>>> x,y,z = pokemon
+>>> print(x,y,z)
+pikachu blastoise darkrai
+>>> exit()
+>
+```
+
+🔹Global Variables
+
+<p> Variables that are created outside of a function are known as global variables. Global variables can be used by everyone, both inside of functions and outside. </p>
+
+```python
+> python
+Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+Ctrl click to launch VS Code Native REPL
+>>> a = 2
+>>> def fun():
+...     print(a)
+...
+>>> fun()
+2
+>>> exit()
+>
+```
+
+<p> If you create a variable with the same name inside a function, this variable will be local, and can only be used inside the function. The global variable with the same name will remain as it was, global and with the original value. </p>
+
+```python
+> python
+Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+Ctrl click to launch VS Code Native REPL
+>>> a = 2
+>>> def fun():
+...     a = 4
+...     print(a+2)
+... 
+>>> fun()
+6
+>>> print(a+2)
+4
+>>> exit()
+>
+```
+
+<p> Normally, when you create a variable inside a function, that variable is local, and can only be used inside that function. To create a global variable inside a function, you can use the global keyword. </p>
+
+<p> Also, use the global keyword if you want to change a global variable inside a function. </p>
+
+```python
+> python
+Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+Ctrl click to launch VS Code Native REPL
+>>> a = 1
+>>> def fun():
+...     global a
+...     global b
+...     a = 2
+...     b = 2
+...     print(a+b)
+... 
+>>> fun()
+4
+>>> print(a+b)
+4
+>>> exit()
+> 
+```
+
+[🔝 Go to top](#table-of-content)
+[🔝 Up](#variables)
+
+
+## Code Challenge - Level 1
+
+[Level 1](https://github.com/Sahill17/python/blob/main/Code%20Challenges/ReadMe/level1.md) - [Solution](https://github.com/Sahill17/python/blob/main/Code%20Challenges/Solution/level1)
