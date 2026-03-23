@@ -2,6 +2,7 @@
 
 * [Introduction](#introduction)
 * [Variables](#variables)
+* [Data Types](#datatypes)
 
 ## Introduction
 
@@ -302,3 +303,65 @@ Ctrl click to launch VS Code Native REPL
 ## Code Challenge - Level 1
 
 [Level 1](https://github.com/Sahill17/python/blob/main/Code%20Challenges/ReadMe/level1.md) - [Solution](https://github.com/Sahill17/python/blob/main/Code%20Challenges/Solution/level1)
+
+## Data Types
+
+<p> Python has the following data types built-in by default: </p>
+
+| Category | Data Type | Example |
+| -------- | --------- | ------- |
+| Numeric Type | <b>int, float, complex</b> | 20, 20.5, 1j |
+| Text Type | <b>str</b> | "Hello" |
+| Sequence Type | <b>list, tuple, range</b> | [1,2,3], (1,2,3), range(3) |
+| Mapping Type | <b>dict</b> | {"name" : "Sahil", "age" : 22}
+| Set Types | <b>set, fronzenset</b> | {"a","b","c"}, fronzenset({"a","b","c"}) |
+| Boolean Type | <b>bool</b> | True |
+| Binary Type | <b>bytes, bytearray, memoryview</b> | b"Hello", bytearray(5), memoryview(bytes(5)) |
+| None Type | <b>NoneType</b> | None |
+
+
+
+🔹 Numeric Data Types
+
+- <b>Int</b>
+  - Int, or integer, is a whole number, positive or negative, without decimals, of unlimited length.
+  ```python
+  > python
+  Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+  Type "help", "copyright", "credits" or "license" for more information.
+  Ctrl click to launch VS Code Native REPL
+  >>> x = 162735
+  >>> y = -178273
+  >>> print(x,type(x),y,type(y))
+  162735 <class 'int'> -178273 <class 'int'>
+  >>> exit()
+  ```
+
+- <b>Float</b>
+  - Float, or "floating point number" is a number, positive or negative, containing one or more decimals. Float can also be scientific numbers with an "e" to indicate the power of 10.
+  ```python
+  > python
+  Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+  Type "help", "copyright", "credits" or "license" for more information.
+  Ctrl click to launch VS Code Native REPL
+  >>> x = 1363.124
+  >>> y = -12432.12
+  >>> z = -73.3e100
+  >>> print(type(x),x,type(y),y,type(z),z)
+  <class 'float'> 1363.124 <class 'float'> -12432.12 <class 'float'> -7.33e+101
+  >>> exit()
+  ```
+
+- <b>Complex</b>
+  - Complex numbers are written with a "j" as the imaginary part.
+  ```python
+  > python
+  Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+  Type "help", "copyright", "credits" or "license" for more information.
+  Ctrl click to launch VS Code Native REPL
+  >>> x = 2+4j
+  >>> y = -5j
+  >>> print(x,type(x),y,type(y)) 
+  (2+4j) <class 'complex'> (-0-5j) <class 'complex'>
+  >>> exit()
+  ```
