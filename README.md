@@ -2,7 +2,8 @@
 
 * [Introduction](#introduction)
 * [Variables](#variables)
-* [Data Types](#datatypes)
+* [Data Types](#data-types)
+* [Strings](#strings)
 
 ## Introduction
 
@@ -365,3 +366,140 @@ Ctrl click to launch VS Code Native REPL
   (2+4j) <class 'complex'> (-0-5j) <class 'complex'>
   >>> exit()
   ```
+
+## Strings
+
+<p> You can use quotes inside a string, as long as they don't match the quotes surrounding the string </p>
+
+```python
+> python
+Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+Ctrl click to launch VS Code Native REPL
+>>> a = "Hello"
+>>> b = 'World'
+>>> print(a,b)
+Hello World
+>>> print("It's nice")
+It's nice
+>>> print('May "Day" May "Day"')
+May "Day" May "Day"
+>>> exit()
+```
+
+<p> You can assign a multiline string to a variable by using three quotes (single/double). </p>
+
+```python
+> python
+Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+Ctrl click to launch VS Code Native REPL
+>>> x = """Ohhh yayayayay
+... This is good, right?
+... yes yes yes"""
+>>> print(x)
+Ohhh yayayayay
+This is good, right?
+yes yes yes
+>>> exit()
+```
+
+<p> Like many other popular programming languages, strings in Python are arrays of unicode characters. However, Python does not have a character data type, a single character is simply a string with a length of 1.</p>
+<P>Square brackets can be used to access elements of the string.</p>
+
+```python
+> python
+Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+Ctrl click to launch VS Code Native REPL
+>>> x = "Hello World"
+>>> print(x[2])
+l
+>>> 
+>>> print(x[5]) 
+ 
+>>> print(len(x))
+11
+>>> exit()
+```
+
+<p> Since strings are arrays, we can loop through the characters in a string. </p>
+
+```python
+> python
+Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+Ctrl click to launch VS Code Native REPL
+>>> for i in "Hii":
+...     print(i)
+... 
+H
+i
+i
+>>> exit()
+```
+
+<p> To check if a certain phrase or character is present in a string, we can use the keyword in. </p>
+
+```python
+python
+Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+Ctrl click to launch VS Code Native REPL
+>>> x = "Hello World"
+>>> if " " in x:
+...     print("yes")
+... 
+yes
+>>> if "  " not in x:
+...     print("yes")
+... 
+yes
+>>> exit()
+```
+
+🔹 Slicing
+
+<p>You can return a range of characters by using the slice syntax. Specify the start index and the end index, separated by a colon, to return a part of the string. </p>
+
+```python
+> python
+Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+Ctrl click to launch VS Code Native REPL
+>>> x = "Hello World"
+>>> print(x[0:5])
+Hello
+>>> print(x[:5])
+Hello
+>>> print(x[5:6])
+ 
+>>> print(x[6:])
+World
+>>> print(x[-5:-6])
+
+>>> print(x[:-5])
+Hello 
+>>> exit()
+```
+
+🔹Built-in methods
+
+```python
+> python
+Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+Ctrl click to launch VS Code Native REPL
+>>> x = "  hEllO wOrLd"
+>>> print(x.strip())
+hEllO wOrLd
+>>> print(x.lower())
+  hello world
+>>> print(x.upper())
+  HELLO WORLD
+>>> print(x.replace(" ",""))
+hEllOwOrLd
+>>> print(x.split())
+['hEllO', 'wOrLd']
+>>> exit()
+```
