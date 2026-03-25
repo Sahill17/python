@@ -4,6 +4,8 @@
 * [Variables](#variables)
 * [Data Types](#data-types)
 * [Strings](#strings)
+* [Booleans](#booleans)
+* [Operators](#operators)
 
 ## Introduction
 
@@ -483,7 +485,7 @@ Hello
 >>> exit()
 ```
 
-🔹Built-in methods
+🔹 Built-in methods
 
 ```python
 > python
@@ -503,3 +505,128 @@ hEllOwOrLd
 ['hEllO', 'wOrLd']
 >>> exit()
 ```
+
+Check out [W3S Page](https://www.w3schools.com/python/python_strings_methods.asp) for more.
+
+🔹 Format Strings
+
+<p>We can combine strings and numbers by using f-strings or the `format()` method.</p>
+
+```python
+> python
+Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+Ctrl click to launch VS Code Native REPL
+>>> 
+>>> a = 22
+>>> print(f"I am {a} years old")
+I am 22 years old
+>>>
+```
+
+<p>A placeholder can include a modifier to format the value.</p>
+
+```python
+> python
+Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+Ctrl click to launch VS Code Native REPL
+>>> a = 3
+>>> print(f"The value is {a:.2f}.")
+The value is 3.00.
+>>> print(f"And double of that is {a * a}.")
+And double of that is 9.
+>>> 
+``` 
+
+## Booleans
+
+<p> Booleans represent one of two values "True" or "False".</p>
+
+```python
+> python
+Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+Ctrl click to launch VS Code Native REPL
+>>> print(bool("Hello"))
+True
+>>> print(bool(""))
+False
+>>> print(bool("0"))
+True
+>>> print(bool("1"))
+True
+>>> print(bool(""))
+False
+>>> print(bool(0))
+False
+>>> print(bool(False))
+False
+>>> print(bool([]))
+False
+>>> print(bool({}))
+False
+>>> print(bool(None))
+False
+>>> exit()
+>
+```
+
+<p> Python also has many built-in functions that return a boolean value, like the `isinstance()` function, which can be used to determine if an object is of a certain data type. </p>
+
+```python
+> python
+Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+Ctrl click to launch VS Code Native REPL
+>>> x = 10
+>>> y = "Hello"
+>>> print(isinstance(x,int))
+True
+>>> print(isinstance(x,str)) 
+False
+>>> print(isinstance(y,str)) 
+True
+>>> exit()
+> 
+```
+
+## Operators
+
+* Arithmetic Operators
+
+<p> Arithmetic operators are used with numeric values to perform common mathematical operations. </p>
+
+| Operator | Name | Example |
+| -------- | ---- | ------- |
+| + | Addition | x + y |
+| - | Subtraction | x - y |
+| * | Multiplication | x * y |
+| / | Division | x / y |
+| % | Modulus | x % y |
+| ** | Exponentiation | x ** y |
+| // | Floor division | x // y |
+
+* Assignment Operator
+
+<p> Assignment operators are used to assign values to variables. </p>
+
+<p> Python 3.8 introduced the := operator, known as the "walrus operator". It assigns values to variables as part of a larger expression. </p>
+
+| Operator | Example | Similar way |
+| -------- | ------- | ----------- |
+| = | x = 2 | |
+| += | x += 2 | x = x + 2 |
+| -= | x -= 2 | x = x - 2 |
+| *= | x *= 2 | x = x * 2 |
+| /= | x /= 2 | x = x / 2 |
+| %= | x %= 2 | x = x % 2 |
+| //= | x //= 2 | x = x // 2 |
+| **= | x **= 2 | x = x ** 2 |
+| &= | x &= 2 | x = x & 2 |
+| \|= | x \|= 2 | x = x \| 2 |
+| ^= | x ^= 2 | x = x ^ 2 |
+| >>= | x >>= 2 | x = x >> 2 |
+| <<= | x <<= 2 | x = x << 2 |
+| := | print(x := 2) | x = 2 <br>n print(X) |
+
